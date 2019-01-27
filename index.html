@@ -14,5 +14,28 @@ Jestem Studentem I roku na kierunku AiR na Politechnice Wrocławskiej</p><br>
 <img src="https://bartoszpiech.github.io//images/JaiKuba.png" alt="Ja i mój przyjaciel Kuba" width="250" height="300">
 <video src="https://bartoszpiech.github.io//images/TomekThug.mp4" width="250" controls><p>Twoja przeglądarka nie obsługuje wideo w HTML5. Tutaj <a href="TomekThug.mp4"> link do wideo</a> :)</video>
 <iframe src="https://editor.p5js.org/baetek/embed/SkqMhJaZE"></iframe>
+  <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
 </body>
 </html>
