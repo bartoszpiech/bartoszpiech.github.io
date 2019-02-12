@@ -1,3 +1,6 @@
+body{
+color:#dedede;
+}
 #container{
 width: 1440px;
 margin-left: auto;
@@ -30,6 +33,7 @@ float: left;
 background-color: black;
 width: 200px;
 padding: 10px;
+text-align:center;
 }
 #footer{
 clear: both;
