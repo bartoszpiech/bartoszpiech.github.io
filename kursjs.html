@@ -18,6 +18,38 @@
 			else if (liczba == 0) document.getElementById("wynik").innerHTML="Zero";
 			else document.getElementById("wynik").innerHTML="To nie jest liczba";
 		}
+
+		function wypisz()
+		{
+			var liczba1 = document.getElementById("pole1").value;
+			var liczba2 = document.getElementById("pole2").value;
+			var napis = "";
+			if (liczba1 > -10000000 && liczba2 > -10000000 && liczba1 < liczba2)
+			{
+			for (i = liczba1; i <= liczba2; i++)
+			{
+				napis = napis + i + " ";
+			}
+			document.getElementById("wynik2").innerHTML=napis;
+			}
+			else if (liczba1 > -10000000 && liczba2 > -10000000 && liczba1 > liczba2)
+			{
+			for (i = liczba2; i <= liczba1; i++)
+			{
+				napis = napis + i + " ";
+			}
+			document.getElementById("wynik2").innerHTML=napis;
+			}
+			else if (liczba1 > -10000000 && liczba2 > -10000000 && liczba1 == liczba2)
+			document.getElementById("wynik2").innerHTML="Liczby są takie same";
+			else if (liczba1 > -10000000)
+			document.getElementById("wynik2").innerHTML="Napis w prawym polu nie jest liczbą";
+			else if (liczba2 > -10000000)
+			document.getElementById("wynik2").innerHTML="Napis w lewym polu nie jest liczbą";
+			else
+			document.getElementById("wynik2").innerHTML="Napisy w lewym i prawym polu nie są liczbami";
+
+		}
 	</script>
 </head>
 
@@ -37,6 +69,10 @@
 			<input type="text" id="pole" />
 			<input type="submit" value="Sprawdź" onclick="sprawdz()" />
 			<div id="wynik"></div>
+			<input type="text" id="pole1" />
+			<input type="text" id="pole2"/>
+			<input type="submit" value="Pokaż" onclick="wypisz()" />
+			<div id="wynik2"></div>
 		</div>
 		<div id="ad">
 			<p>Fajne reklamy</p>
