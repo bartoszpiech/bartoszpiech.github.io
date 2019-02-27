@@ -1,4 +1,4 @@
-var haslo = "Kocham cię najmocniej klaudusia";
+var haslo = "Słonie chodzą po suficie";
 haslo = haslo.toUpperCase();
 var dlugosc = haslo.length;
 var haslo1 = "";
