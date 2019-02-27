@@ -7,14 +7,36 @@
 <meta name="description" content="Prywatna witryna Bartosza Piech, znajdują się tam moje zainteresowania, aktualności i informacje. Zapraszam" />
 <meta name="keywords" content="Bartosz Piech, Bartosz, Piech, hobby, programowanie, c, c++ html" />
 <link href="style.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript">
+
+		var dzisiaj = new Date();
+
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth()+1;
+		var rok = dzisiaj.getFullYear();
+		var godzina = dzisiaj.getHours();
+		var minuta = dzisiaj.getMinutes();
+		var sekunda = dzisiaj.getSeconds();
+
+	</script>
+
 </head>
+
+
 <body bgcolor="black">
 	<div id="container">
 		<div id="logo">
 			<a href="http://bartoszpiech.github.io/"><img src="https://bartoszpiech.github.io//images/logo.png" alt="Logo" width="300"></a>
 		</div>
 		<div id="nav">
-			<a href="http://bartoszpiech.github.io/">Strona Glowna</a><br/>
+			<div id="zegar">
+
+			</div>
+			<script type="text/javascript">
+				document.getElementById("zegar").innerHTML = dzien;
+			</script>
+			<a href="http://bartoszpiech.github.io/">Strona Glowna Siema</a><br/>
 			<a href="http://bartoszpiech.github.io/galeria">Galeria </a><br/>
 			<a href="http://bartoszpiech.github.io/fajnememy">Fajne memy</a><br/>
 		</div>
