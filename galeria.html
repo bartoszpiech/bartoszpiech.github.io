@@ -8,10 +8,24 @@
 <meta name="keywords" content="Bartosz Piech, Bartosz, Piech, hobby, programowanie, c, c++ html" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="timer.js"></script>
+
+
+	<script type="text/javascript">
+		var numer = 1;
+		function zmienslajd()
+		{
+			numer++; if (numer > 3) numer=1;
+			var plik = "<img src=\"http://bartoszpiech.github.io/images/galeria/slajd" + numer + ".png\" />";
+			document.getElementById("slider").innerHTML = plik;
+			setTimeout("zmienslajd()",5000);
+		}
+	</script>
+
+
 </head>
 
 
-<body bgcolor="black" onload="odliczanie();">
+<body bgcolor="black" onload="odliczanie(); zmienslajd();">
 	<div id="container">
 		<div id="logo">
 			<a href="http://bartoszpiech.github.io/"><img src="https://bartoszpiech.github.io//images/logo.png" alt="Logo" width="300"></a>
@@ -24,9 +38,7 @@
 			<a href="http://bartoszpiech.github.io/kursjs">Kurs JS</a><br/>
 		</div>
 		<div id="content">
-			<img src="https://bartoszpiech.github.io//images/Studniowka.jpg" alt="Ja i moja dziewczyna na jej studniówce" width="250">
-		<img src="https://bartoszpiech.github.io//images/JaiKuba.png" alt="Ja i mój przyjaciel Kuba" width="250">
-<img src="https://bartoszpiech.github.io//images/Oski.jpg" alt="Moj brat Oski" width="250">
+			<div id="slider"></div>
 		</div>
 		<div id="ad">
 			<a href="http://www.eurokontakt.net.pl/"><img src="https://bartoszpiech.github.io//images/ce.png" alt="Centrum Eurokontakt" width="200"></a>
