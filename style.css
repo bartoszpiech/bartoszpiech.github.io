@@ -48,6 +48,7 @@ text-decoration: none;
 }
 a:visited {
   text-decoration: none;
+  color: #dedede;
 }
 
 a:hover {
